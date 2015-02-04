@@ -31,6 +31,10 @@
   return [self decode:image hints:nil error:error];
 }
 
+- (ZXResult *)decodeWithImage:(id)image error:(NSError *__autoreleasing *)error {
+    return nil;
+}
+
 - (ZXResult *)decode:(ZXBinaryBitmap *)image hints:(ZXDecodeHints *)hints error:(NSError **)error {
   ZXBitMatrix *matrix = [image blackMatrixWithError:error];
   if (!matrix) {

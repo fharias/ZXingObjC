@@ -16,6 +16,7 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 #import "ViewController.h"
+#import "TSDecoder.h"
 
 @interface ViewController ()
 
@@ -36,6 +37,7 @@
   self.capture.camera = self.capture.back;
   self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
   self.capture.rotation = 90.0f;
+    self.capture.threesignals = TRUE;
 
   self.capture.layer.frame = self.view.bounds;
   [self.view.layer addSublayer:self.capture.layer];
@@ -50,7 +52,7 @@
   self.capture.delegate = self;
   self.capture.layer.frame = self.view.bounds;
 
-  CGAffineTransform captureSizeTransform = CGAffineTransformMakeScale(320 / self.view.frame.size.width, 480 / self.view.frame.size.height);
+  CGAffineTransform captureSizeTransform = CGAffineTransformMakeScale(100 / self.view.frame.size.width, 100 / self.view.frame.size.height);
   self.capture.scanRect = CGRectApplyAffineTransform(self.scanRectView.frame, captureSizeTransform);
 }
 
@@ -115,11 +117,15 @@
   }
 }
 
+
 #pragma mark - ZXCaptureDelegate Methods
+
+
 
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
   if (!result) return;
 
+    NSLog(@"Captura ::");
   // We got a result. Display information about the result onscreen.
   NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
   NSString *display = [NSString stringWithFormat:@"Scanned!\n\nFormat: %@\n\nContents:\n%@", formatString, result.text];

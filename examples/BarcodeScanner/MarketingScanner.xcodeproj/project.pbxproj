@@ -422,7 +422,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: FABIO ARIAS (THKS98QMVE)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BarcodeScanner-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -432,7 +433,7 @@
 				INFOPLIST_FILE = "MarketingScanner-Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = MarketingScanner;
-				PROVISIONING_PROFILE = "1a72a87a-6546-4b5b-8bc8-5d5ee5d2a200";
+				PROVISIONING_PROFILE = "dc9f0631-0c80-4fc2-a296-4f49e28a6632";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -441,7 +442,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: FABIO ARIAS (THKS98QMVE)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BarcodeScanner-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -451,7 +453,7 @@
 				INFOPLIST_FILE = "MarketingScanner-Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = MarketingScanner;
-				PROVISIONING_PROFILE = "1a72a87a-6546-4b5b-8bc8-5d5ee5d2a200";
+				PROVISIONING_PROFILE = "dc9f0631-0c80-4fc2-a296-4f49e28a6632";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -1648,6 +1648,7 @@
 		25FE5D4016D0B84C00826CDB /* ZXRSSExpandedStackedInternalTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FE5D3F16D0B84C00826CDB /* ZXRSSExpandedStackedInternalTestCase.m */; };
 		25FE5D4316D0B8B200826CDB /* ZXTestCaseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FE5D4216D0B8B200826CDB /* ZXTestCaseUtil.m */; };
 		25FE5D4516D1997C00826CDB /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 25FE5D4416D1997C00826CDB /* Resources */; };
+		A3B019C51A8097AC00698A3C /* TSReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B019C41A8097AC00698A3C /* TSReader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2386,6 +2387,8 @@
 		25FE5D4116D0B8B100826CDB /* ZXTestCaseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXTestCaseUtil.h; sourceTree = "<group>"; };
 		25FE5D4216D0B8B200826CDB /* ZXTestCaseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXTestCaseUtil.m; sourceTree = "<group>"; };
 		25FE5D4416D1997C00826CDB /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		A3B019C31A80964100698A3C /* TSReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSReader.h; sourceTree = "<group>"; };
+		A3B019C41A8097AC00698A3C /* TSReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSReader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2623,6 +2626,8 @@
 				0294D0CE190ED8DA00BBACCB /* ZXMultiFormatReader.m */,
 				0294D0CF190ED8DA00BBACCB /* ZXMultiFormatWriter.h */,
 				0294D0D0190ED8DA00BBACCB /* ZXMultiFormatWriter.m */,
+				A3B019C31A80964100698A3C /* TSReader.h */,
+				A3B019C41A8097AC00698A3C /* TSReader.m */,
 			);
 			path = ZXingObjC;
 			sourceTree = "<group>";
@@ -4613,6 +4618,7 @@
 				25403D9D166A9A0800E13304 /* ZXImage.m in Sources */,
 				25403DCB166A9C0E00E13304 /* ZXMathUtils.m in Sources */,
 				25403DCD166A9C0E00E13304 /* ZXMonochromeRectangleDetector.m in Sources */,
+				A3B019C51A8097AC00698A3C /* TSReader.m in Sources */,
 				25403DCF166A9C0E00E13304 /* ZXWhiteRectangleDetector.m in Sources */,
 				25403DD1166A9C0E00E13304 /* ZXGenericGF.m in Sources */,
 				25403DD3166A9C0E00E13304 /* ZXGenericGFPoly.m in Sources */,

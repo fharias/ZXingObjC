@@ -14,7 +14,10 @@
  * limitations under the License.
  */
 
+
 #import <ImageIO/ImageIO.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "ZXBinaryBitmap.h"
 #import "ZXCapture.h"
 #import "ZXCaptureDelegate.h"
@@ -23,6 +26,8 @@
 #import "ZXHybridBinarizer.h"
 #import "ZXReader.h"
 #import "ZXResult.h"
+#import "TSReader.h"
+
 
 @interface ZXCapture ()
 
@@ -357,7 +362,8 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     }
 
     self.lastScannedImage = rotatedImage;
-
+      
+      
     if (self.captureToFilename) {
       NSURL *url = [NSURL fileURLWithPath:self.captureToFilename];
       CGImageDestinationRef dest = CGImageDestinationCreateWithURL((__bridge CFURLRef)url, (__bridge CFStringRef)@"public.png", 1, nil);
@@ -389,12 +395,19 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
           CGImageRelease(image);
         });
       }
+        
 
       if (self.delegate) {
         ZXBinaryBitmap *bitmap = [[ZXBinaryBitmap alloc] initWithBinarizer:binarizer];
-
+          ZXResult *result = nil;
+          
         NSError *error;
-        ZXResult *result = [self.reader decode:bitmap hints:self.hints error:&error];
+          if(self.threesignals){
+              TSReader *decoder = [[TSReader alloc] init];
+              result = [decoder decodeWithImage:&rotatedImage error:&error];
+          }else{
+         result = [self.reader decode:bitmap hints:self.hints error:&error];
+          }
         if (result) {
           dispatch_async(dispatch_get_main_queue(), ^{
             [self.delegate captureResult:self result:result];
@@ -406,6 +419,9 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 }
 
 #pragma mark - Private
+
+
+
 
 // Adapted from http://blog.coriolis.ch/2009/09/04/arbitrary-rotation-of-a-cgimage/ and https://github.com/JanX2/CreateRotateWriteCGImage
 - (CGImageRef)createRotatedImage:(CGImageRef)original degrees:(float)degrees CF_RETURNS_RETAINED {
