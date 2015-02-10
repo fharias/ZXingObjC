@@ -52,7 +52,7 @@
   self.capture.delegate = self;
   self.capture.layer.frame = self.view.bounds;
 
-  CGAffineTransform captureSizeTransform = CGAffineTransformMakeScale(100 / self.view.frame.size.width, 100 / self.view.frame.size.height);
+  CGAffineTransform captureSizeTransform = CGAffineTransformMakeScale(320 / self.view.frame.size.width, 480 / self.view.frame.size.height);
   self.capture.scanRect = CGRectApplyAffineTransform(self.scanRectView.frame, captureSizeTransform);
 }
 
@@ -111,7 +111,8 @@
 
     case kBarcodeFormatUPCEANExtension:
       return @"UPC/EAN extension";
-
+      case kThreeSignalsFormat:
+          return @"ThreeSignals Code";
     default:
       return @"Unknown";
   }
