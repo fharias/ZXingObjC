@@ -1648,6 +1648,33 @@
 		25FE5D4016D0B84C00826CDB /* ZXRSSExpandedStackedInternalTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FE5D3F16D0B84C00826CDB /* ZXRSSExpandedStackedInternalTestCase.m */; };
 		25FE5D4316D0B8B200826CDB /* ZXTestCaseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FE5D4216D0B8B200826CDB /* ZXTestCaseUtil.m */; };
 		25FE5D4516D1997C00826CDB /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 25FE5D4416D1997C00826CDB /* Resources */; };
+		A319FE891A899B4B00D0D820 /* TSRequestReader.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE871A899B4B00D0D820 /* TSRequestReader.h */; };
+		A319FE8A1A899B4B00D0D820 /* TSRequestReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE881A899B4B00D0D820 /* TSRequestReader.m */; };
+		A319FEA51A899C7D00D0D820 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE8D1A899C7D00D0D820 /* JSONModel.h */; };
+		A319FEA61A899C7D00D0D820 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE8E1A899C7D00D0D820 /* JSONModel.m */; };
+		A319FEA71A899C7D00D0D820 /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE8F1A899C7D00D0D820 /* JSONModelArray.h */; };
+		A319FEA81A899C7D00D0D820 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE901A899C7D00D0D820 /* JSONModelArray.m */; };
+		A319FEA91A899C7D00D0D820 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE911A899C7D00D0D820 /* JSONModelClassProperty.h */; };
+		A319FEAA1A899C7D00D0D820 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE921A899C7D00D0D820 /* JSONModelClassProperty.m */; };
+		A319FEAB1A899C7D00D0D820 /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE931A899C7D00D0D820 /* JSONModelError.h */; };
+		A319FEAC1A899C7D00D0D820 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE941A899C7D00D0D820 /* JSONModelError.m */; };
+		A319FEAD1A899C7D00D0D820 /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE961A899C7D00D0D820 /* NSArray+JSONModel.h */; };
+		A319FEAE1A899C7D00D0D820 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE971A899C7D00D0D820 /* NSArray+JSONModel.m */; };
+		A319FEAF1A899C7D00D0D820 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE981A899C7D00D0D820 /* JSONModelLib.h */; };
+		A319FEB01A899C7D00D0D820 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE9A1A899C7D00D0D820 /* JSONAPI.h */; };
+		A319FEB11A899C7D00D0D820 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE9B1A899C7D00D0D820 /* JSONAPI.m */; };
+		A319FEB21A899C7D00D0D820 /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE9C1A899C7D00D0D820 /* JSONHTTPClient.h */; };
+		A319FEB31A899C7D00D0D820 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE9D1A899C7D00D0D820 /* JSONHTTPClient.m */; };
+		A319FEB41A899C7D00D0D820 /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE9E1A899C7D00D0D820 /* JSONModel+networking.h */; };
+		A319FEB51A899C7D00D0D820 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE9F1A899C7D00D0D820 /* JSONModel+networking.m */; };
+		A319FEB61A899C7D00D0D820 /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FEA11A899C7D00D0D820 /* JSONKeyMapper.h */; };
+		A319FEB71A899C7D00D0D820 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FEA21A899C7D00D0D820 /* JSONKeyMapper.m */; };
+		A319FEB81A899C7D00D0D820 /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FEA31A899C7D00D0D820 /* JSONValueTransformer.h */; };
+		A319FEB91A899C7D00D0D820 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FEA41A899C7D00D0D820 /* JSONValueTransformer.m */; };
+		A319FEBD1A899E6F00D0D820 /* WMService.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FEBB1A899E6F00D0D820 /* WMService.h */; };
+		A319FEBE1A899E6F00D0D820 /* WMService.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FEBC1A899E6F00D0D820 /* WMService.m */; };
+		A319FEFF1A89AEEA00D0D820 /* TSResponseReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FEFE1A89AEEA00D0D820 /* TSResponseReader.m */; };
+		A319FF001A89AEEA00D0D820 /* TSResponseReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FEFE1A89AEEA00D0D820 /* TSResponseReader.m */; };
 		A3B019C51A8097AC00698A3C /* TSReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B019C41A8097AC00698A3C /* TSReader.m */; };
 /* End PBXBuildFile section */
 
@@ -2387,6 +2414,33 @@
 		25FE5D4116D0B8B100826CDB /* ZXTestCaseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXTestCaseUtil.h; sourceTree = "<group>"; };
 		25FE5D4216D0B8B200826CDB /* ZXTestCaseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXTestCaseUtil.m; sourceTree = "<group>"; };
 		25FE5D4416D1997C00826CDB /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		A319FE871A899B4B00D0D820 /* TSRequestReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSRequestReader.h; sourceTree = "<group>"; };
+		A319FE881A899B4B00D0D820 /* TSRequestReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSRequestReader.m; sourceTree = "<group>"; };
+		A319FE8D1A899C7D00D0D820 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		A319FE8E1A899C7D00D0D820 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		A319FE8F1A899C7D00D0D820 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
+		A319FE901A899C7D00D0D820 /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelArray.m; sourceTree = "<group>"; };
+		A319FE911A899C7D00D0D820 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		A319FE921A899C7D00D0D820 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		A319FE931A899C7D00D0D820 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		A319FE941A899C7D00D0D820 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		A319FE961A899C7D00D0D820 /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
+		A319FE971A899C7D00D0D820 /* NSArray+JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONModel.m"; sourceTree = "<group>"; };
+		A319FE981A899C7D00D0D820 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		A319FE9A1A899C7D00D0D820 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		A319FE9B1A899C7D00D0D820 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		A319FE9C1A899C7D00D0D820 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		A319FE9D1A899C7D00D0D820 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		A319FE9E1A899C7D00D0D820 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		A319FE9F1A899C7D00D0D820 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
+		A319FEA11A899C7D00D0D820 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		A319FEA21A899C7D00D0D820 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		A319FEA31A899C7D00D0D820 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		A319FEA41A899C7D00D0D820 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		A319FEBB1A899E6F00D0D820 /* WMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMService.h; sourceTree = "<group>"; };
+		A319FEBC1A899E6F00D0D820 /* WMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMService.m; sourceTree = "<group>"; };
+		A319FEFD1A89AE3800D0D820 /* TSResponseReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSResponseReader.h; sourceTree = "<group>"; };
+		A319FEFE1A89AEEA00D0D820 /* TSResponseReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSResponseReader.m; sourceTree = "<group>"; };
 		A3B019C31A80964100698A3C /* TSReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSReader.h; sourceTree = "<group>"; };
 		A3B019C41A8097AC00698A3C /* TSReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSReader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2611,6 +2665,10 @@
 		25403CB8166A96FA00E13304 /* ZXingObjC */ = {
 			isa = PBXGroup;
 			children = (
+				A319FEBA1A899E6F00D0D820 /* watermarking */,
+				A319FE8B1A899C7D00D0D820 /* JSONModel */,
+				A319FE871A899B4B00D0D820 /* TSRequestReader.h */,
+				A319FE881A899B4B00D0D820 /* TSRequestReader.m */,
 				25403CEC166A999D00E13304 /* aztec */,
 				25403CFF166A9A0800E13304 /* client */,
 				25403D9F166A9C0E00E13304 /* common */,
@@ -2628,6 +2686,8 @@
 				0294D0D0190ED8DA00BBACCB /* ZXMultiFormatWriter.m */,
 				A3B019C31A80964100698A3C /* TSReader.h */,
 				A3B019C41A8097AC00698A3C /* TSReader.m */,
+				A319FEFD1A89AE3800D0D820 /* TSResponseReader.h */,
+				A319FEFE1A89AEEA00D0D820 /* TSResponseReader.m */,
 			);
 			path = ZXingObjC;
 			sourceTree = "<group>";
@@ -3668,6 +3728,75 @@
 			name = encoder;
 			sourceTree = "<group>";
 		};
+		A319FE8B1A899C7D00D0D820 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				A319FE8C1A899C7D00D0D820 /* JSONModel */,
+				A319FE951A899C7D00D0D820 /* JSONModelCategories */,
+				A319FE981A899C7D00D0D820 /* JSONModelLib.h */,
+				A319FE991A899C7D00D0D820 /* JSONModelNetworking */,
+				A319FEA01A899C7D00D0D820 /* JSONModelTransformations */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		A319FE8C1A899C7D00D0D820 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				A319FE8D1A899C7D00D0D820 /* JSONModel.h */,
+				A319FE8E1A899C7D00D0D820 /* JSONModel.m */,
+				A319FE8F1A899C7D00D0D820 /* JSONModelArray.h */,
+				A319FE901A899C7D00D0D820 /* JSONModelArray.m */,
+				A319FE911A899C7D00D0D820 /* JSONModelClassProperty.h */,
+				A319FE921A899C7D00D0D820 /* JSONModelClassProperty.m */,
+				A319FE931A899C7D00D0D820 /* JSONModelError.h */,
+				A319FE941A899C7D00D0D820 /* JSONModelError.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		A319FE951A899C7D00D0D820 /* JSONModelCategories */ = {
+			isa = PBXGroup;
+			children = (
+				A319FE961A899C7D00D0D820 /* NSArray+JSONModel.h */,
+				A319FE971A899C7D00D0D820 /* NSArray+JSONModel.m */,
+			);
+			path = JSONModelCategories;
+			sourceTree = "<group>";
+		};
+		A319FE991A899C7D00D0D820 /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				A319FE9A1A899C7D00D0D820 /* JSONAPI.h */,
+				A319FE9B1A899C7D00D0D820 /* JSONAPI.m */,
+				A319FE9C1A899C7D00D0D820 /* JSONHTTPClient.h */,
+				A319FE9D1A899C7D00D0D820 /* JSONHTTPClient.m */,
+				A319FE9E1A899C7D00D0D820 /* JSONModel+networking.h */,
+				A319FE9F1A899C7D00D0D820 /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
+		A319FEA01A899C7D00D0D820 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				A319FEA11A899C7D00D0D820 /* JSONKeyMapper.h */,
+				A319FEA21A899C7D00D0D820 /* JSONKeyMapper.m */,
+				A319FEA31A899C7D00D0D820 /* JSONValueTransformer.h */,
+				A319FEA41A899C7D00D0D820 /* JSONValueTransformer.m */,
+			);
+			path = JSONModelTransformations;
+			sourceTree = "<group>";
+		};
+		A319FEBA1A899E6F00D0D820 /* watermarking */ = {
+			isa = PBXGroup;
+			children = (
+				A319FEBB1A899E6F00D0D820 /* WMService.h */,
+				A319FEBC1A899E6F00D0D820 /* WMService.m */,
+			);
+			path = watermarking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -3686,6 +3815,7 @@
 				0210FBD818E0A90700B1F4CE /* ZXRSSUtils.h in Headers */,
 				0210FC1318E0A9EE00B1F4CE /* ZXQRCodeErrorCorrectionLevel.h in Headers */,
 				0210FB5C18E0A5C900B1F4CE /* ZXAztecDetectorResult.h in Headers */,
+				A319FEB21A899C7D00D0D820 /* JSONHTTPClient.h in Headers */,
 				0210FB5718E0A5C900B1F4CE /* ZXAztecEncoder.h in Headers */,
 				0294D141190ED90B00BBACCB /* ZXResultMetadataType.h in Headers */,
 				0294D157190EDA1F00BBACCB /* ZXingObjCQRCode.h in Headers */,
@@ -3705,6 +3835,7 @@
 				0210FB6018E0A5FC00B1F4CE /* ZXAddressBookAUResultParser.h in Headers */,
 				0210FB6118E0A5FC00B1F4CE /* ZXAddressBookDoCoMoResultParser.h in Headers */,
 				0210FB6218E0A5FC00B1F4CE /* ZXAddressBookParsedResult.h in Headers */,
+				A319FEB41A899C7D00D0D820 /* JSONModel+networking.h in Headers */,
 				0210FB6318E0A5FC00B1F4CE /* ZXBizcardResultParser.h in Headers */,
 				0210FBE918E0A92900B1F4CE /* ZXOneDimensionalCodeWriter.h in Headers */,
 				0210FBDD18E0A92900B1F4CE /* ZXCode128Writer.h in Headers */,
@@ -3713,9 +3844,11 @@
 				0210FBB418E0A85900B1F4CE /* ZXMaxiCodeDecodedBitStreamParser.h in Headers */,
 				0210FBDA18E0A92900B1F4CE /* ZXCodaBarReader.h in Headers */,
 				0294D12C190ED90B00BBACCB /* ZXLuminanceSource.h in Headers */,
+				A319FEAF1A899C7D00D0D820 /* JSONModelLib.h in Headers */,
 				0210FB6518E0A5FC00B1F4CE /* ZXCalendarParsedResult.h in Headers */,
 				0210FBF218E0A93500B1F4CE /* ZXUPCEANExtension5Support.h in Headers */,
 				0210FBEC18E0A92900B1F4CE /* ZXUPCAWriter.h in Headers */,
+				A319FEA51A899C7D00D0D820 /* JSONModel.h in Headers */,
 				0210FBD318E0A8F100B1F4CE /* ZXRSSExpandedReader.h in Headers */,
 				0210FB6618E0A5FC00B1F4CE /* ZXEmailAddressParsedResult.h in Headers */,
 				0210FB6718E0A5FD00B1F4CE /* ZXEmailAddressResultParser.h in Headers */,
@@ -3723,8 +3856,10 @@
 				0210FB6818E0A5FD00B1F4CE /* ZXEmailDoCoMoResultParser.h in Headers */,
 				0210FBC718E0A8DA00B1F4CE /* ZXAnyAIDecoder.h in Headers */,
 				0210FC1D18E0AA3600B1F4CE /* ZXQRCodeFinderPatternInfo.h in Headers */,
+				A319FEAD1A899C7D00D0D820 /* NSArray+JSONModel.h in Headers */,
 				0294D0D1190ED8DA00BBACCB /* ZXMultiFormatReader.h in Headers */,
 				0210FBD418E0A90700B1F4CE /* ZXAbstractRSSReader.h in Headers */,
+				A319FEB01A899C7D00D0D820 /* JSONAPI.h in Headers */,
 				0210FBD518E0A90700B1F4CE /* ZXRSS14Reader.h in Headers */,
 				0210FB6918E0A5FD00B1F4CE /* ZXExpandedProductParsedResult.h in Headers */,
 				0210FB6A18E0A5FD00B1F4CE /* ZXExpandedProductResultParser.h in Headers */,
@@ -3754,6 +3889,7 @@
 				0294D17D190EE5F400BBACCB /* ZXingObjCDataMatrix.h in Headers */,
 				0210FB7218E0A5FD00B1F4CE /* ZXProductResultParser.h in Headers */,
 				0294D123190ED90B00BBACCB /* ZXingObjCCore.h in Headers */,
+				A319FEA71A899C7D00D0D820 /* JSONModelArray.h in Headers */,
 				0210FBCB18E0A8DA00B1F4CE /* ZXRSSExpandedDecodedInformation.h in Headers */,
 				0210FB7318E0A5FD00B1F4CE /* ZXResultParser.h in Headers */,
 				0210FBC418E0A8DA00B1F4CE /* ZXAI01AndOtherAIs.h in Headers */,
@@ -3785,12 +3921,14 @@
 				0210FBE218E0A92900B1F4CE /* ZXEAN13Writer.h in Headers */,
 				0210FBC518E0A8DA00B1F4CE /* ZXAI01decoder.h in Headers */,
 				0210FC2418E0AA6D00B1F4CE /* ZXQRCodeReader.h in Headers */,
+				A319FEB61A899C7D00D0D820 /* JSONKeyMapper.h in Headers */,
 				0210FC1A18E0AA2500B1F4CE /* ZXQRCodeDetector.h in Headers */,
 				0210FBFC18E0A97200B1F4CE /* ZXPDF417DecodedBitStreamParser.h in Headers */,
 				0210FB7A18E0A5FD00B1F4CE /* ZXTextParsedResult.h in Headers */,
 				0210FC0F18E0A9E200B1F4CE /* ZXQRCodeDataBlock.h in Headers */,
 				0210FC1118E0A9E200B1F4CE /* ZXQRCodeDecodedBitStreamParser.h in Headers */,
 				0210FC0C18E0A9C000B1F4CE /* ZXPDF417ResultMetadata.h in Headers */,
+				A319FEB81A899C7D00D0D820 /* JSONValueTransformer.h in Headers */,
 				0210FB7B18E0A5FD00B1F4CE /* ZXURIParsedResult.h in Headers */,
 				0210FBEA18E0A92900B1F4CE /* ZXOneDReader.h in Headers */,
 				0210FB7C18E0A5FD00B1F4CE /* ZXURIResultParser.h in Headers */,
@@ -3842,13 +3980,16 @@
 				0210FBCA18E0A8DA00B1F4CE /* ZXRSSExpandedDecodedChar.h in Headers */,
 				0210FBC218E0A8DA00B1F4CE /* ZXAI013x0x1xDecoder.h in Headers */,
 				0210FBB318E0A85900B1F4CE /* ZXMaxiCodeBitMatrixParser.h in Headers */,
+				A319FEA91A899C7D00D0D820 /* JSONModelClassProperty.h in Headers */,
 				0294D111190ED90B00BBACCB /* ZXDimension.h in Headers */,
 				0210FB9418E0A62300B1F4CE /* ZXCharacterSetECI.h in Headers */,
 				0210FB9518E0A62300B1F4CE /* ZXDecoderResult.h in Headers */,
 				0210FB9618E0A62300B1F4CE /* ZXDefaultGridSampler.h in Headers */,
 				0294D181190EE63C00BBACCB /* ZXingObjCMaxiCode.h in Headers */,
+				A319FEBD1A899E6F00D0D820 /* WMService.h in Headers */,
 				0210FB9718E0A62300B1F4CE /* ZXDetectorResult.h in Headers */,
 				0210FB8B18E0A62200B1F4CE /* ZXGenericGF.h in Headers */,
+				A319FE891A899B4B00D0D820 /* TSRequestReader.h in Headers */,
 				0210FC1718E0AA0A00B1F4CE /* ZXQRCodeDecoderMetaData.h in Headers */,
 				0210FBA618E0A7CC00B1F4CE /* ZXDataMatrixDefaultPlacement.h in Headers */,
 				0210FB9818E0A62300B1F4CE /* ZXGlobalHistogramBinarizer.h in Headers */,
@@ -3868,6 +4009,7 @@
 				0210FBBF18E0A8DA00B1F4CE /* ZXAI01320xDecoder.h in Headers */,
 				028BB97818D9E8D800BDF709 /* ZXIntArray.h in Headers */,
 				0210FBD118E0A8EF00B1F4CE /* ZXRSSExpandedPair.h in Headers */,
+				A319FEAB1A899C7D00D0D820 /* JSONModelError.h in Headers */,
 				0210FC0018E0A97500B1F4CE /* ZXPDF417ScanningDecoder.h in Headers */,
 				0210FB8818E0A62200B1F4CE /* ZXMathUtils.h in Headers */,
 				0210FC0D18E0A9C000B1F4CE /* ZXPDF417Writer.h in Headers */,
@@ -4628,6 +4770,7 @@
 				25403DDB166A9C0E00E13304 /* ZXBitMatrix.m in Sources */,
 				25403DDD166A9C0E00E13304 /* ZXBitSource.m in Sources */,
 				25403DDF166A9C0E00E13304 /* ZXCharacterSetECI.m in Sources */,
+				A319FEFF1A89AEEA00D0D820 /* TSResponseReader.m in Sources */,
 				25403DE1166A9C0E00E13304 /* ZXDecoderResult.m in Sources */,
 				0294D129190ED90B00BBACCB /* ZXInvertedLuminanceSource.m in Sources */,
 				25403DE3166A9C0E00E13304 /* ZXDefaultGridSampler.m in Sources */,
@@ -4643,6 +4786,7 @@
 				25403E06166A9CCB00E13304 /* ZXDataMatrixDataBlock.m in Sources */,
 				25403E08166A9CCB00E13304 /* ZXDataMatrixDecodedBitStreamParser.m in Sources */,
 				25403E0A166A9CCB00E13304 /* ZXDataMatrixDecoder.m in Sources */,
+				A319FEB71A899C7D00D0D820 /* JSONKeyMapper.m in Sources */,
 				25403E0C166A9CCB00E13304 /* ZXDataMatrixVersion.m in Sources */,
 				25403E0E166A9CCB00E13304 /* ZXDataMatrixDetector.m in Sources */,
 				25403E10166A9CCB00E13304 /* ZXDataMatrixReader.m in Sources */,
@@ -4650,17 +4794,21 @@
 				25403E1E166A9D4B00E13304 /* ZXMaxiCodeDecodedBitStreamParser.m in Sources */,
 				25403E20166A9D4B00E13304 /* ZXMaxiCodeDecoder.m in Sources */,
 				25403E22166A9D4B00E13304 /* ZXMaxiCodeReader.m in Sources */,
+				A319FEAE1A899C7D00D0D820 /* NSArray+JSONModel.m in Sources */,
 				25389B6C17FFC98100772392 /* ZXPDF417DetectionResultColumn.m in Sources */,
 				024D311219104B77008C0C89 /* ZXByteMatrix.m in Sources */,
 				0294D12F190ED90B00BBACCB /* ZXLuminanceSource.m in Sources */,
+				A319FEB11A899C7D00D0D820 /* JSONAPI.m in Sources */,
 				0218B85818D230CC0005E7EC /* ZXAztecBinaryShiftToken.m in Sources */,
 				0294D0DA190ED8DA00BBACCB /* ZXMultiFormatWriter.m in Sources */,
 				25403E38166A9D8B00E13304 /* ZXByQuadrantReader.m in Sources */,
 				25403E3A166A9D8B00E13304 /* ZXGenericMultipleBarcodeReader.m in Sources */,
+				A319FEB31A899C7D00D0D820 /* JSONHTTPClient.m in Sources */,
 				25403EAD166A9DF400E13304 /* ZXAbstractExpandedDecoder.m in Sources */,
 				25403EAF166A9DF400E13304 /* ZXAI013103decoder.m in Sources */,
 				25403EB1166A9DF400E13304 /* ZXAI01320xDecoder.m in Sources */,
 				25403EB3166A9DF400E13304 /* ZXAI01392xDecoder.m in Sources */,
+				A319FEA61A899C7D00D0D820 /* JSONModel.m in Sources */,
 				25403EB5166A9DF400E13304 /* ZXAI01393xDecoder.m in Sources */,
 				2519AB4517FE554D00A71C45 /* ZXPDF417Common.m in Sources */,
 				25403EB7166A9DF400E13304 /* ZXAI013x0x1xDecoder.m in Sources */,
@@ -4682,12 +4830,14 @@
 				25403ECF166A9DF400E13304 /* ZXRSSExpandedFieldParser.m in Sources */,
 				25403ED1166A9DF400E13304 /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */,
 				25403ED3166A9DF400E13304 /* ZXBitArrayBuilder.m in Sources */,
+				A319FEBE1A899E6F00D0D820 /* WMService.m in Sources */,
 				25403ED5166A9DF400E13304 /* ZXRSSExpandedPair.m in Sources */,
 				25403ED7166A9DF400E13304 /* ZXRSSExpandedReader.m in Sources */,
 				2519AB7117FE60E700A71C45 /* ZXPDF417BoundingBox.m in Sources */,
 				25403ED9166A9DF400E13304 /* ZXAbstractRSSReader.m in Sources */,
 				25403EDB166A9DF400E13304 /* ZXRSSDataCharacter.m in Sources */,
 				25403EDD166A9DF400E13304 /* ZXRSSPair.m in Sources */,
+				A319FEB91A899C7D00D0D820 /* JSONValueTransformer.m in Sources */,
 				0294D135190ED90B00BBACCB /* ZXPlanarYUVLuminanceSource.m in Sources */,
 				25403EDF166A9DF400E13304 /* ZXRSS14Reader.m in Sources */,
 				25403EE1166A9DF400E13304 /* ZXRSSFinderPattern.m in Sources */,
@@ -4742,6 +4892,8 @@
 				25B62DFA18DDDDB5004782B1 /* ZXVINParsedResult.m in Sources */,
 				25403F94166A9F2D00E13304 /* ZXQRCodeMode.m in Sources */,
 				25403F96166A9F2D00E13304 /* ZXQRCodeBitMatrixParser.m in Sources */,
+				A319FEA81A899C7D00D0D820 /* JSONModelArray.m in Sources */,
+				A319FEAA1A899C7D00D0D820 /* JSONModelClassProperty.m in Sources */,
 				25403F98166A9F2D00E13304 /* ZXQRCodeDataBlock.m in Sources */,
 				25403F9A166A9F2D00E13304 /* ZXQRCodeDecodedBitStreamParser.m in Sources */,
 				25403F9C166A9F2D00E13304 /* ZXQRCodeDecoder.m in Sources */,
@@ -4749,9 +4901,11 @@
 				25403FA0166A9F2D00E13304 /* ZXQRCodeAlignmentPattern.m in Sources */,
 				25403FA2166A9F2D00E13304 /* ZXQRCodeAlignmentPatternFinder.m in Sources */,
 				25403FA4166A9F2D00E13304 /* ZXQRCodeFinderPatternFinder.m in Sources */,
+				A319FE8A1A899B4B00D0D820 /* TSRequestReader.m in Sources */,
 				25403FA6166A9F2D00E13304 /* ZXQRCodeFinderPatternInfo.m in Sources */,
 				25403FA8166A9F2D00E13304 /* ZXQRCodeDetector.m in Sources */,
 				25403FAA166A9F2D00E13304 /* ZXQRCodeFinderPattern.m in Sources */,
+				A319FEB51A899C7D00D0D820 /* JSONModel+networking.m in Sources */,
 				25403FAC166A9F2D00E13304 /* ZXQRCodeBlockPair.m in Sources */,
 				0294D102190ED90B00BBACCB /* ZXBinarizer.m in Sources */,
 				25403FB0166A9F2D00E13304 /* ZXQRCodeEncoder.m in Sources */,
@@ -4780,6 +4934,7 @@
 				254299CC16D5BD5400D4C045 /* ZXDataMatrixHighLevelEncoder.m in Sources */,
 				254299D416D5C96100D4C045 /* ZXDataMatrixSymbolInfo.m in Sources */,
 				254299E816D5D81A00D4C045 /* ZXDataMatrixTextEncoder.m in Sources */,
+				A319FEAC1A899C7D00D0D820 /* JSONModelError.m in Sources */,
 				254299F016D5D94B00D4C045 /* ZXDataMatrixX12Encoder.m in Sources */,
 				2504D9D016FFD2E200DF8882 /* ZXAztecCode.m in Sources */,
 				2504D9DD16FFD4CD00DF8882 /* ZXAztecEncoder.m in Sources */,
@@ -4868,6 +5023,7 @@
 				2540410A166AA0F100E13304 /* ZXAI01_3103_DecoderTest.m in Sources */,
 				2540410B166AA0F100E13304 /* ZXAI01_3202_3203_DecoderTest.m in Sources */,
 				2540410C166AA0F100E13304 /* ZXAI01_3X0X_1X_DecoderTest.m in Sources */,
+				A319FF001A89AEEA00D0D820 /* TSResponseReader.m in Sources */,
 				2540410D166AA0F100E13304 /* ZXAnyAIDecoderTest.m in Sources */,
 				2540410E166AA0F100E13304 /* ZXRSSExpandedFieldParserTest.m in Sources */,
 				25404112166AA0F100E13304 /* ZXRSSExpandedImage2binaryTestCase.m in Sources */,
@@ -5528,9 +5684,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Distribution;
 		};
@@ -5543,11 +5703,20 @@
 				DSTROOT = /tmp/ZXingObjC.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ios-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "ZXingObjC-iOS";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Distribution;
 		};
@@ -5661,8 +5830,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -5686,9 +5859,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -5701,11 +5878,21 @@
 				DSTROOT = /tmp/ZXingObjC.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ios-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "ZXingObjC-iOS";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -5718,11 +5905,20 @@
 				DSTROOT = /tmp/ZXingObjC.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ios-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "ZXingObjC-iOS";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

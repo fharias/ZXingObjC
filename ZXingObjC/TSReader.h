@@ -13,6 +13,10 @@
 /**
  * This implementation can detect and decode Aztec codes in an image.
  */
-@interface TSReader : NSObject 
-- (ZXResult *)decodeWithImage:(CGImageRef *)image error:(NSError *__autoreleasing *)error;
+@interface TSReader : NSLock<NSLocking>
+{
+    NSMutableArray *list;
+}
+- (ZXResult *)decodeWithImage:(CGImageRef )image error:(NSError *__autoreleasing *)error;
+
 @end
