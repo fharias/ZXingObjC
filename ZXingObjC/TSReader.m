@@ -5,9 +5,11 @@
 //  Created by FABIO ARIAS on 3/02/15.
 //  Copyright (c) 2015 zxing. All rights reserved.
 //
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "TSReader.h"
 #import "ZXBinaryBitmap.h"
+#import "ZXImage.h"
 #import "ZXDecodeHints.h"
 #import "ZXDecoderResult.h"
 #import "ZXReader.h"
@@ -18,13 +20,36 @@
 #import <ImageIO/ImageIO.h>
 #import "WMService.h"
 #import "TSResponseReader.h"
+#import "ZXHybridBinarizer.h"
+#import "ZXCGImageLuminanceSource.h"
 
 @implementation TSReader
-
+@synthesize password, key, userId, url;
 - (TSReader *)init {
     if (self = [super init]) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        
     }
     return self;
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *lastLocation = [locations lastObject];
+    NSLog(@"OldLocation %f %f", lastLocation.coordinate.latitude, lastLocation.coordinate.longitude);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    self.location = newLocation;
+    NSLog(@"OldLocation %f %f", oldLocation.coordinate.latitude, oldLocation.coordinate.longitude);
+    NSLog(@"NewLocation %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
 }
 
 
@@ -34,57 +59,67 @@
 
 - (ZXResult *)decode:(ZXBinaryBitmap *)image hints:(ZXDecodeHints *)hints error:(NSError **)error {
     NSLog(@"LLegamos");
-    
+    //CGImageRef * imageToRead =nil;
     return nil;
 }
 
-
-- (ZXResult *)decodeWithImage:(CGImageRef )image error:(NSError *__autoreleasing *)error {
-    //NSLog(@"LLegamos con Imagen");
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef*)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error{
     ZXResult *result = nil;
     @synchronized(self){
-        
+        [self.locationManager setDelegate:self];
+        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+            [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager startUpdatingLocation];
+        UIDevice * deviceInfo = [[UIDevice alloc] init];
         TSRequestReader* request = [[TSRequestReader alloc] init];
         TSData * data = [[TSData alloc] init];
         TSDataDevice * device = [[TSDataDevice alloc] init];
         TSDataCoords * coords = [[TSDataCoords alloc] init];
-        [data setUserId:@"12345"];
-        [data setImage:[self base64EncodeImageRef:image]];
-        [device setModel:@"iPhone"];
-        [device setPlatform:@"iOS"];
-        [device setUuid:@"X"];
-        [device setVersion:@"8.1,1"];
-        [coords setLatitude:0];
-        [coords setLongitude:0];
+        [data setUserId:[self userId]];
+        [data setImage:[self base64EncodeImageRef:imageRef]];
+        [device setModel:[deviceInfo model]];
+        [device setPlatform:[deviceInfo systemName]];
+        [device setUuid:[[deviceInfo identifierForVendor] UUIDString]];
+        [device setVersion:[deviceInfo systemVersion]];
+        [coords setLatitude:_location.coordinate.latitude];
+        [coords setLongitude:_location.coordinate.longitude];
         [data setCoords:coords];
         [data setDevice:device];
         NSString *jsonString = [data toJSONString];
         //NSLog(@"JSON Output: %@", jsonString);
         [request setData:jsonString];
-        [request setPassword:@"xt01epr4"];
-        [request setKey:@"f2796643176da5cf868348e9c1381df4fbfcf46e"];
+        [request setPassword:self.password];
+        [request setKey:self.key];
         [request setProcess:@"CheckTag"];
-        
-        WMService * service = [[WMService alloc] initWithUrl:@"http://www.3signals.co:8080/WMService/WMService"];
-        NSString *responseSoap = [service sendWithData:jsonString withProcess:@"CheckTag" withKey:@"f2796643176da5cf868348e9c1381df4fbfcf46e" password:@"xt01epr4"];
+        //NSLog(@"URL-3: %@", self.url);
+        WMService * service = [[WMService alloc] initWithUrl:[self url]];
+        NSString *responseSoap = [service sendWithData:jsonString withProcess:@"CheckTag" withKey:[self key] password:[self password]];
         if(!isNull(responseSoap)){
             NSError * error = [[NSError alloc] init];
             TSResponseReader * responseReader = [[TSResponseReader alloc] initWithString:responseSoap
-        error:&error];
-            if([responseReader.state isEqualToString:@"0"]){
-                NSLog(@"Error: %@", responseReader.message);
+                                                                                   error:&error];
+            if([responseReader.state isEqualToString:@"1"]){
+                result = [[ZXResult alloc] initWithText:responseReader.tagid rawBytes:nil resultPoints:nil format:kThreeSignalsFormat];
             }else{
-               result = [[ZXResult alloc] initWithText:responseReader.tagid rawBytes:nil resultPoints:nil format:kThreeSignalsFormat];
+                //NSLog(@"Error: %@", responseReader.message);
             }
         }
     }
     return result;
 }
 
+
+- (ZXResult *)decodeWithImage:(CGImageRef )image error:(NSError *__autoreleasing *)error {
+    //NSLog(@"LLegamos con Imagen");
+    return nil;
+}
+
 // Create Base64 from CGImageRef
 
-- (NSString*) base64EncodeImageRef:(CGImageRef)input{
-    UIImage *scannedImage = [[UIImage alloc] initWithCGImage:input];
+- (NSString*) base64EncodeImageRef:(CGImageRef*)input{
+    UIImage *scannedImage = [[UIImage alloc] initWithCGImage:*input];
     
     return [self imageToNSString:scannedImage];
 }

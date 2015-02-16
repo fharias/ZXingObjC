@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#import <ImageIO/ImageIO.h>
 @class ZXBinaryBitmap, ZXDecodeHints, ZXResult;
 
 /**
@@ -26,7 +26,10 @@
  * format is present within the image as well, and then decodes it accordingly.
  */
 @protocol ZXReader <NSObject>
-
+@property (retain, nonatomic) NSString * userId;
+@property (retain, nonatomic) NSString * key;
+@property (retain, nonatomic) NSString * password;
+@property (retain, nonatomic) NSString * url;
 /**
  * Locates and decodes a barcode in some format within an image.
  *
@@ -49,7 +52,20 @@
  *  the barcode cannot be located or decoded for any reason
  */
 - (ZXResult *)decode:(ZXBinaryBitmap *)image hints:(ZXDecodeHints *)hints error:(NSError **)error;
-
+/**
+ * Locates and decodes a barcode in some format within an image. This method also accepts
+ * hints, each possibly associated to some data, which may help the implementation decode.
+ *
+ * @param image image of barcode to decode
+ * @param imageRef image of barcode to decode taken from camera
+ * @param hints passed as a {@link java.util.Map} from {@link com.google.zxing.DecodeHintType}
+ * to arbitrary data. The
+ * meaning of the data depends upon the hint type. The implementation may or may not do
+ * anything with these hints.
+ * @return String which the barcode encodes or nil if
+ *  the barcode cannot be located or decoded for any reason
+ */
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef *)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error;
 /**
  * Resets any internal state the implementation has after a decode, to prepare it
  * for reuse.

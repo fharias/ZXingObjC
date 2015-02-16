@@ -40,6 +40,10 @@
 @property (nonatomic, assign) BOOL torch;
 @property (nonatomic, assign) CGAffineTransform transform;
 @property (nonatomic, assign) BOOL threesignals;
+@property (nonatomic, assign) NSString * userId;
+@property (nonatomic, assign) NSString * key;
+@property (nonatomic, assign) NSString * password;
+@property (nonatomic, assign) NSString * url;
 
 - (int)back;
 - (int)front;

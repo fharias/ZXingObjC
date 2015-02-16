@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#import <ImageIO/ImageIO.h>
 #import "ZXBitArray.h"
 #import "ZXEAN13Reader.h"
 #import "ZXErrors.h"
@@ -65,6 +65,10 @@ const int ZX_EAN13_FIRST_DIGIT_ENCODINGS[] = {
     _decodeMiddleCounters = [[ZXIntArray alloc] initWithLength:4];
   }
   return self;
+}
+
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef*)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error{
+    return [self decode:image hints:hints error:error];
 }
 
 - (int)decodeMiddle:(ZXBitArray *)row startRange:(NSRange)startRange result:(NSMutableString *)result error:(NSError **)error {

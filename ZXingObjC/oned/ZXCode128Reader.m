@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#import <ImageIO/ImageIO.h>
 #import "ZXBitArray.h"
 #import "ZXByteArray.h"
 #import "ZXCode128Reader.h"
@@ -210,6 +210,10 @@ const int ZX_CODE128_CODE_STOP = 106;
   }
 
   return nil;
+}
+
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef*)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error{
+    return [self decode:image hints:hints error:error];
 }
 
 - (int)decodeCode:(ZXBitArray *)row counters:(ZXIntArray *)counters rowOffset:(int)rowOffset {

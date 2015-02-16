@@ -31,7 +31,7 @@
 #import "ZXResultPoint.h"
 
 @implementation ZXPDF417Reader
-
+@synthesize password, key, userId, url;
 /**
  * Locates and decodes a PDF417 code in an image.
  *
@@ -41,6 +41,10 @@
  */
 - (ZXResult *)decode:(ZXBinaryBitmap *)image error:(NSError **)error {
   return [self decode:image hints:nil error:error];
+}
+
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef*)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error{
+    return [self decode:image hints:hints error:error];
 }
 
 - (ZXResult *)decode:(ZXBinaryBitmap *)image hints:(ZXDecodeHints *)hints error:(NSError **)error {

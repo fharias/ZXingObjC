@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#import <ImageIO/ImageIO.h>
 #import "ZXCodaBarReader.h"
 #import "ZXCode128Reader.h"
 #import "ZXCode39Reader.h"
@@ -88,6 +88,18 @@
   }
 
   return self;
+}
+
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef*)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error{
+    for (ZXOneDReader *reader in self.readers) {
+        ZXResult *result = [reader decode:image imageRef:imageRef hints:hints error:error];
+        if (result) {
+            return result;
+        }
+    }
+    
+    if (error) *error = ZXNotFoundErrorInstance();
+    return nil;
 }
 
 - (ZXResult *)decodeRow:(int)rowNumber row:(ZXBitArray *)row hints:(ZXDecodeHints *)hints error:(NSError **)error {

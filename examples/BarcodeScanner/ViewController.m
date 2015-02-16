@@ -37,7 +37,12 @@
   self.capture.camera = self.capture.back;
   self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
   self.capture.rotation = 90.0f;
-    self.capture.threesignals = TRUE;
+    //self.capture.threesignals = TRUE;
+    [self.capture setKey:@"f2796643176da5cf868348e9c1381df4fbfcf46e"];
+    [self.capture setPassword:@"xt01epr4"];
+     [self.capture setUserId:@"12345"];
+      [self.capture setUrl:@"http://www.3signals.co:8080/WMService/WMService"];
+    
 
   self.capture.layer.frame = self.view.bounds;
   [self.view.layer addSublayer:self.capture.layer];

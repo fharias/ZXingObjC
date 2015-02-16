@@ -77,6 +77,10 @@
   }
 }
 
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef*)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error{
+    return [self decode:image hints:hints error:error];
+}
+
 - (ZXResult *)decode:(ZXBinaryBitmap *)image hints:(ZXDecodeHints *)hints error:(NSError **)error {
   ZXResult *result = [self.ean13Reader decode:image hints:hints error:error];
   if (result) {

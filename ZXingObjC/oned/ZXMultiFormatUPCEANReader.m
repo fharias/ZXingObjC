@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#import <ImageIO/ImageIO.h>
 #import "ZXDecodeHints.h"
 #import "ZXEAN8Reader.h"
 #import "ZXEAN13Reader.h"

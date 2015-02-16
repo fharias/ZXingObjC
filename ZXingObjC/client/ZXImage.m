@@ -23,9 +23,10 @@
 
 @implementation ZXImage
 
+@synthesize cgimage;
 - (ZXImage *)initWithCGImageRef:(CGImageRef)image {
   if (self = [super init]) {
-    _cgimage = CGImageRetain(image);
+    cgimage = CGImageRetain(image);
   }
 
   return self;
@@ -39,7 +40,7 @@
       CGImageSourceRef source = CGImageSourceCreateWithDataProvider(provider, 0);
 
       if (source) {
-        _cgimage = CGImageSourceCreateImageAtIndex(source, 0, 0);
+        cgimage = CGImageSourceCreateImageAtIndex(source, 0, 0);
         CFRelease(source);
       }
 
@@ -59,8 +60,8 @@
 }
 
 - (void)dealloc {
-  if (_cgimage) {
-    CGImageRelease(_cgimage);
+  if (cgimage) {
+    CGImageRelease(cgimage);
   }
 }
 

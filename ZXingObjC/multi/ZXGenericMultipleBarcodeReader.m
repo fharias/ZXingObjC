@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#import <ImageIO/ImageIO.h>
 #import "ZXErrors.h"
 #import "ZXGenericMultipleBarcodeReader.h"
 #import "ZXReader.h"

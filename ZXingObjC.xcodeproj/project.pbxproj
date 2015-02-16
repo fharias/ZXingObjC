@@ -1648,6 +1648,7 @@
 		25FE5D4016D0B84C00826CDB /* ZXRSSExpandedStackedInternalTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FE5D3F16D0B84C00826CDB /* ZXRSSExpandedStackedInternalTestCase.m */; };
 		25FE5D4316D0B8B200826CDB /* ZXTestCaseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FE5D4216D0B8B200826CDB /* ZXTestCaseUtil.m */; };
 		25FE5D4516D1997C00826CDB /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 25FE5D4416D1997C00826CDB /* Resources */; };
+		A31901841A9189BD00D0D820 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31901831A9189BD00D0D820 /* CoreLocation.framework */; };
 		A319FE891A899B4B00D0D820 /* TSRequestReader.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE871A899B4B00D0D820 /* TSRequestReader.h */; };
 		A319FE8A1A899B4B00D0D820 /* TSRequestReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE881A899B4B00D0D820 /* TSRequestReader.m */; };
 		A319FEA51A899C7D00D0D820 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE8D1A899C7D00D0D820 /* JSONModel.h */; };
@@ -2414,6 +2415,7 @@
 		25FE5D4116D0B8B100826CDB /* ZXTestCaseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXTestCaseUtil.h; sourceTree = "<group>"; };
 		25FE5D4216D0B8B200826CDB /* ZXTestCaseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXTestCaseUtil.m; sourceTree = "<group>"; };
 		25FE5D4416D1997C00826CDB /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		A31901831A9189BD00D0D820 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A319FE871A899B4B00D0D820 /* TSRequestReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSRequestReader.h; sourceTree = "<group>"; };
 		A319FE881A899B4B00D0D820 /* TSRequestReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSRequestReader.m; sourceTree = "<group>"; };
 		A319FE8D1A899C7D00D0D820 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
@@ -2450,6 +2452,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31901841A9189BD00D0D820 /* CoreLocation.framework in Frameworks */,
 				2540471B166AC21000E13304 /* AVFoundation.framework in Frameworks */,
 				0217453B18E35B2B00864750 /* CoreGraphics.framework in Frameworks */,
 				0217454818E35C2700864750 /* CoreMedia.framework in Frameworks */,
@@ -2626,6 +2629,7 @@
 		25403CA8166A96F900E13304 = {
 			isa = PBXGroup;
 			children = (
+				A31901831A9189BD00D0D820 /* CoreLocation.framework */,
 				25403CB8166A96FA00E13304 /* ZXingObjC */,
 				25403CCD166A96FA00E13304 /* ZXingObjCTests */,
 				25403CB9166A96FA00E13304 /* Supporting Files */,
@@ -5690,7 +5694,7 @@
 				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 armv7s arm64 x86_64";
 			};
 			name = Distribution;
 		};
@@ -5708,6 +5712,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/include/libxml2,
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lxml2",
@@ -5835,7 +5840,7 @@
 					"-lxml2",
 				);
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 armv7s arm64 x86_64";
 			};
 			name = Debug;
 		};
@@ -5865,7 +5870,7 @@
 				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 armv7s arm64 x86_64";
 			};
 			name = Release;
 		};
@@ -5910,6 +5915,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/include/libxml2,
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lxml2",

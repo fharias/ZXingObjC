@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#import <ImageIO/ImageIO.h>
 #import "ZXAztecDecoder.h"
 #import "ZXAztecDetector.h"
 #import "ZXAztecDetectorResult.h"
@@ -27,12 +27,17 @@
 
 @implementation ZXAztecReader
 
+@synthesize password, key, userId, url;
 - (ZXResult *)decode:(ZXBinaryBitmap *)image error:(NSError **)error {
   return [self decode:image hints:nil error:error];
 }
 
 - (ZXResult *)decodeWithImage:(id)image error:(NSError *__autoreleasing *)error {
     return nil;
+}
+
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef*)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error{
+    return [self decode:image hints:hints error:error];
 }
 
 - (ZXResult *)decode:(ZXBinaryBitmap *)image hints:(ZXDecodeHints *)hints error:(NSError **)error {

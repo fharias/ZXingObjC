@@ -57,6 +57,24 @@
         _focusMode = AVCaptureFocusModeContinuousAutoFocus;
         _hardStop = NO;
         _hints = [ZXDecodeHints hints];
+        [_hints addPossibleFormat:kThreeSignalsFormat];
+        [_hints addPossibleFormat:kBarcodeFormatAztec];
+        [_hints addPossibleFormat:kBarcodeFormatCodabar];
+        [_hints addPossibleFormat:kBarcodeFormatCode128];
+        [_hints addPossibleFormat:kBarcodeFormatCode39];
+        [_hints addPossibleFormat:kBarcodeFormatCode93];
+        [_hints addPossibleFormat:kBarcodeFormatDataMatrix];
+        [_hints addPossibleFormat:kBarcodeFormatEan13];
+        [_hints addPossibleFormat:kBarcodeFormatEan8];
+        [_hints addPossibleFormat:kBarcodeFormatITF];
+        [_hints addPossibleFormat:kBarcodeFormatMaxiCode];
+        [_hints addPossibleFormat:kBarcodeFormatPDF417];
+        [_hints addPossibleFormat:kBarcodeFormatQRCode];
+        [_hints addPossibleFormat:kBarcodeFormatRSS14];
+        [_hints addPossibleFormat:kBarcodeFormatRSSExpanded];
+        [_hints addPossibleFormat:kBarcodeFormatUPCA];
+        [_hints addPossibleFormat:kBarcodeFormatUPCE];
+        [_hints addPossibleFormat:kBarcodeFormatUPCEANExtension];
         _lastScannedImage = NULL;
         _onScreen = NO;
         _orderInSkip = 0;
@@ -64,6 +82,8 @@
         
         if (NSClassFromString(@"ZXMultiFormatReader")) {
             _reader = [NSClassFromString(@"ZXMultiFormatReader") performSelector:@selector(reader)];
+            
+            //NSLog(@"MultiFormat");
         }
         _rotation = 0.0f;
         _running = NO;
@@ -406,7 +426,14 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
                     result = [decoder decodeWithImage:rotatedImage error:&error];
                     decoder = nil;
                 }else{
-                    result = [self.reader decode:bitmap hints:self.hints error:&error];
+                    [self.reader setKey:self.key];
+                    [self.reader setPassword:self.password];
+                    [self.reader setUserId:self.userId];
+                    //NSLog(@"URL-1: %@", [self url]);
+                    [self.reader setUrl:[[NSString alloc] initWithString:[self url]]];
+                    //NSLog(@"URL-2: %@", [self.reader url]);
+                    result = [self.reader decode:bitmap imageRef:&rotatedImage hints:self.hints error:&error];
+                    //result = [self.reader decode:bitmap hints:self.hints error:&error];
                 }
                 if (result) {
                     dispatch_async(dispatch_get_main_queue(), ^{

@@ -7,16 +7,16 @@
 //
 #import <ImageIO/ImageIO.h>
 #import "ZXReader.h"
+#import <CoreLocation/CoreLocation.h>
 
 @class ZXBinaryBitmap, ZXDecodeHints, ZXResult;
 
 /**
  * This implementation can detect and decode Aztec codes in an image.
  */
-@interface TSReader : NSLock<NSLocking>
-{
-    NSMutableArray *list;
-}
+@interface TSReader : NSObject <ZXReader, CLLocationManagerDelegate>
+@property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, retain) CLLocation * location;
 - (ZXResult *)decodeWithImage:(CGImageRef )image error:(NSError *__autoreleasing *)error;
 
 @end

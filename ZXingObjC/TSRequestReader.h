@@ -17,8 +17,8 @@
 @end
 
 @interface TSDataCoords : JSONModel
-@property (retain, nonatomic) NSNumber * latitude;
-@property (retain, nonatomic) NSNumber * longitude;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
 @end
 
 @interface TSDataDevice : JSONModel

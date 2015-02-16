@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#import <ImageIO/ImageIO.h>
 #import "ZXAztecReader.h"
 #import "ZXBinaryBitmap.h"
 #import "ZXDataMatrixReader.h"
@@ -25,6 +25,7 @@
 #import "ZXPDF417Reader.h"
 #import "ZXQRCodeReader.h"
 #import "ZXResult.h"
+#import "TSReader.h"
 
 @interface ZXMultiFormatReader ()
 
@@ -33,7 +34,7 @@
 @end
 
 @implementation ZXMultiFormatReader
-
+@synthesize password, key, userId, url;
 - (id)init {
   if (self = [super init]) {
     _readers = [NSMutableArray array];
@@ -120,11 +121,20 @@
     if ([hints containsFormat:kBarcodeFormatMaxiCode]) {
       [self.readers addObject:[[ZXMaxiCodeReader alloc] init]];
     }
+      if ([hints containsFormat:kThreeSignalsFormat]) {
+          TSReader * tsReader = [[TSReader alloc] init];
+          [tsReader setPassword:self.password];
+          [tsReader setKey:self.key];
+          [tsReader setUrl:self.url];
+          [tsReader setUserId:self.userId];
+          [self.readers addObject:tsReader];
+      }
     if (addZXOneDReader && tryHarder) {
       [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
     }
   }
   if ([self.readers count] == 0) {
+      //NSLog(@"MultiFormat Cero");
     if (!tryHarder) {
       [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
     }
@@ -133,6 +143,7 @@
     [self.readers addObject:[[ZXAztecReader alloc] init]];
     [self.readers addObject:[[ZXPDF417Reader alloc] init]];
     [self.readers addObject:[[ZXMaxiCodeReader alloc] init]];
+      [self.readers addObject:[[TSReader alloc] init]];
     if (tryHarder) {
       [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
     }
@@ -145,6 +156,20 @@
       [reader reset];
     }
   }
+}
+
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef*)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error{
+    [self setHints:hints];
+    if (self.readers != nil) {
+        for (id<ZXReader> reader in self.readers) {
+            ZXResult *result = [reader decode:image imageRef:imageRef hints:self.hints error:nil];
+            if (result) {
+                return result;
+            }
+        }
+    }
+    if (error) *error = ZXNotFoundErrorInstance();
+    return nil;
 }
 
 - (ZXResult *)decodeInternal:(ZXBinaryBitmap *)image error:(NSError **)error {

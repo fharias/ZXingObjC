@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#import <ImageIO/ImageIO.h>
 #import "ZXBinaryBitmap.h"
 #import "ZXBitArray.h"
 #import "ZXDecodeHints.h"
@@ -27,9 +27,13 @@ const int ZX_ONED_INTEGER_MATH_SHIFT = 8;
 const int ZX_ONED_PATTERN_MATCH_RESULT_SCALE_FACTOR = 1 << ZX_ONED_INTEGER_MATH_SHIFT;
 
 @implementation ZXOneDReader
-
+@synthesize password, key, userId, url;
 - (ZXResult *)decode:(ZXBinaryBitmap *)image error:(NSError **)error {
   return [self decode:image hints:nil error:error];
+}
+
+- (ZXResult *)decode:(ZXBinaryBitmap *)image imageRef:(CGImageRef*)imageRef hints:(ZXDecodeHints *)hints error:(NSError **)error{
+    return [self decode:image hints:hints error:error];
 }
 
 // Note that we don't try rotation without the try harder flag, even if rotation was supported.
