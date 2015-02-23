@@ -1649,6 +1649,8 @@
 		25FE5D4316D0B8B200826CDB /* ZXTestCaseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FE5D4216D0B8B200826CDB /* ZXTestCaseUtil.m */; };
 		25FE5D4516D1997C00826CDB /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 25FE5D4416D1997C00826CDB /* Resources */; };
 		A31901841A9189BD00D0D820 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31901831A9189BD00D0D820 /* CoreLocation.framework */; };
+		A31901881A927C3E00D0D820 /* NeurallabsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A31901871A927C3D00D0D820 /* NeurallabsClient.m */; };
+		A319018A1A92843900D0D820 /* LicensePlateReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A31901891A92843900D0D820 /* LicensePlateReader.m */; };
 		A319FE891A899B4B00D0D820 /* TSRequestReader.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE871A899B4B00D0D820 /* TSRequestReader.h */; };
 		A319FE8A1A899B4B00D0D820 /* TSRequestReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A319FE881A899B4B00D0D820 /* TSRequestReader.m */; };
 		A319FEA51A899C7D00D0D820 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A319FE8D1A899C7D00D0D820 /* JSONModel.h */; };
@@ -2416,8 +2418,12 @@
 		25FE5D4216D0B8B200826CDB /* ZXTestCaseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXTestCaseUtil.m; sourceTree = "<group>"; };
 		25FE5D4416D1997C00826CDB /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		A31901831A9189BD00D0D820 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		A319FE871A899B4B00D0D820 /* TSRequestReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSRequestReader.h; sourceTree = "<group>"; };
-		A319FE881A899B4B00D0D820 /* TSRequestReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSRequestReader.m; sourceTree = "<group>"; };
+		A31901871A927C3D00D0D820 /* NeurallabsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeurallabsClient.m; sourceTree = "<group>"; };
+		A31901891A92843900D0D820 /* LicensePlateReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicensePlateReader.m; sourceTree = "<group>"; };
+		A319018B1A92845100D0D820 /* LicensePlateReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicensePlateReader.h; sourceTree = "<group>"; };
+		A319018C1A9293CE00D0D820 /* NeurallabsClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeurallabsClient.h; sourceTree = "<group>"; };
+		A319FE871A899B4B00D0D820 /* TSRequestReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSRequestReader.h; path = ../TSRequestReader.h; sourceTree = "<group>"; };
+		A319FE881A899B4B00D0D820 /* TSRequestReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSRequestReader.m; path = ../TSRequestReader.m; sourceTree = "<group>"; };
 		A319FE8D1A899C7D00D0D820 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
 		A319FE8E1A899C7D00D0D820 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
 		A319FE8F1A899C7D00D0D820 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
@@ -2441,10 +2447,10 @@
 		A319FEA41A899C7D00D0D820 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		A319FEBB1A899E6F00D0D820 /* WMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMService.h; sourceTree = "<group>"; };
 		A319FEBC1A899E6F00D0D820 /* WMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMService.m; sourceTree = "<group>"; };
-		A319FEFD1A89AE3800D0D820 /* TSResponseReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSResponseReader.h; sourceTree = "<group>"; };
-		A319FEFE1A89AEEA00D0D820 /* TSResponseReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSResponseReader.m; sourceTree = "<group>"; };
-		A3B019C31A80964100698A3C /* TSReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSReader.h; sourceTree = "<group>"; };
-		A3B019C41A8097AC00698A3C /* TSReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSReader.m; sourceTree = "<group>"; };
+		A319FEFD1A89AE3800D0D820 /* TSResponseReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TSResponseReader.h; path = ../TSResponseReader.h; sourceTree = "<group>"; };
+		A319FEFE1A89AEEA00D0D820 /* TSResponseReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSResponseReader.m; path = ../TSResponseReader.m; sourceTree = "<group>"; };
+		A3B019C31A80964100698A3C /* TSReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TSReader.h; path = ../TSReader.h; sourceTree = "<group>"; };
+		A3B019C41A8097AC00698A3C /* TSReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSReader.m; path = ../TSReader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2671,8 +2677,6 @@
 			children = (
 				A319FEBA1A899E6F00D0D820 /* watermarking */,
 				A319FE8B1A899C7D00D0D820 /* JSONModel */,
-				A319FE871A899B4B00D0D820 /* TSRequestReader.h */,
-				A319FE881A899B4B00D0D820 /* TSRequestReader.m */,
 				25403CEC166A999D00E13304 /* aztec */,
 				25403CFF166A9A0800E13304 /* client */,
 				25403D9F166A9C0E00E13304 /* common */,
@@ -2688,10 +2692,6 @@
 				0294D0CE190ED8DA00BBACCB /* ZXMultiFormatReader.m */,
 				0294D0CF190ED8DA00BBACCB /* ZXMultiFormatWriter.h */,
 				0294D0D0190ED8DA00BBACCB /* ZXMultiFormatWriter.m */,
-				A3B019C31A80964100698A3C /* TSReader.h */,
-				A3B019C41A8097AC00698A3C /* TSReader.m */,
-				A319FEFD1A89AE3800D0D820 /* TSResponseReader.h */,
-				A319FEFE1A89AEEA00D0D820 /* TSResponseReader.m */,
 			);
 			path = ZXingObjC;
 			sourceTree = "<group>";
@@ -3795,8 +3795,18 @@
 		A319FEBA1A899E6F00D0D820 /* watermarking */ = {
 			isa = PBXGroup;
 			children = (
+				A319FE871A899B4B00D0D820 /* TSRequestReader.h */,
+				A319FE881A899B4B00D0D820 /* TSRequestReader.m */,
+				A3B019C31A80964100698A3C /* TSReader.h */,
+				A3B019C41A8097AC00698A3C /* TSReader.m */,
+				A319FEFD1A89AE3800D0D820 /* TSResponseReader.h */,
+				A319FEFE1A89AEEA00D0D820 /* TSResponseReader.m */,
 				A319FEBB1A899E6F00D0D820 /* WMService.h */,
 				A319FEBC1A899E6F00D0D820 /* WMService.m */,
+				A31901871A927C3D00D0D820 /* NeurallabsClient.m */,
+				A31901891A92843900D0D820 /* LicensePlateReader.m */,
+				A319018B1A92845100D0D820 /* LicensePlateReader.h */,
+				A319018C1A9293CE00D0D820 /* NeurallabsClient.h */,
 			);
 			path = watermarking;
 			sourceTree = "<group>";
@@ -4867,6 +4877,7 @@
 				0294D171190EDAA300BBACCB /* ZXQRCodeMultiReader.m in Sources */,
 				25403F07166A9DF400E13304 /* ZXOneDReader.m in Sources */,
 				25403F09166A9DF400E13304 /* ZXUPCAReader.m in Sources */,
+				A319018A1A92843900D0D820 /* LicensePlateReader.m in Sources */,
 				25403F0B166A9DF400E13304 /* ZXUPCAWriter.m in Sources */,
 				25403F0D166A9DF400E13304 /* ZXUPCEANExtension2Support.m in Sources */,
 				024A231618D3747C006AE14A /* ZXQRCodeDecoderMetaData.m in Sources */,
@@ -4919,6 +4930,7 @@
 				25403FB8166A9F2D00E13304 /* ZXQRCodeReader.m in Sources */,
 				25389B7417FFCA2700772392 /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
 				25403FBA166A9F2D00E13304 /* ZXQRCodeWriter.m in Sources */,
+				A31901881A927C3E00D0D820 /* NeurallabsClient.m in Sources */,
 				25FE5D3416D0AFED00826CDB /* ZXRSSExpandedRow.m in Sources */,
 				2519AB3F17FD1EE400A71C45 /* ZXPDF417Writer.m in Sources */,
 				0294D114190ED90B00BBACCB /* ZXDimension.m in Sources */,

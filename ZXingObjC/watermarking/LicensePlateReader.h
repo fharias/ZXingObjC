@@ -1,8 +1,8 @@
 //
-//  TSReader.h
+//  LicensePlateReader.h
 //  ZXingObjC
 //
-//  Created by FABIO ARIAS on 3/02/15.
+//  Created by FABIO ARIAS on 16/02/15.
 //  Copyright (c) 2015 zxing. All rights reserved.
 //
 #import <ImageIO/ImageIO.h>
@@ -14,7 +14,7 @@
 /**
  * This implementation can detect and decode Aztec codes in an image.
  */
-@interface TSReader : NSObject <CLLocationManagerDelegate, ZXReader>
+@interface LicensePlateReader : NSObject <CLLocationManagerDelegate, ZXReader>
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, retain) CLLocation * location;
 - (ZXResult *)decodeWithImage:(CGImageRef )image error:(NSError *__autoreleasing *)error;

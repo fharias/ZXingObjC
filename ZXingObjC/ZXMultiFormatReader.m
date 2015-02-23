@@ -26,6 +26,7 @@
 #import "ZXQRCodeReader.h"
 #import "ZXResult.h"
 #import "TSReader.h"
+#import "LicensePlateReader.h"
 
 @interface ZXMultiFormatReader ()
 
@@ -127,7 +128,13 @@
           [tsReader setKey:self.key];
           [tsReader setUrl:self.url];
           [tsReader setUserId:self.userId];
-          [self.readers addObject:tsReader];
+          //[self.readers addObject:tsReader];
+          LicensePlateReader * plReader = [[LicensePlateReader alloc] init];
+          [plReader setPassword:self.password];
+          [plReader setKey:self.key];
+          [plReader setUrl:self.url];
+          [plReader setUserId:self.userId];
+          [self.readers addObject:plReader];
       }
     if (addZXOneDReader && tryHarder) {
       [self.readers addObject:[[ZXMultiFormatOneDReader alloc] initWithHints:hints]];
