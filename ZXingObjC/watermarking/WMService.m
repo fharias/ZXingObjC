@@ -28,8 +28,10 @@ NSString * elementKey;
 
 
 -(NSString*) sendWithData:(NSString *)_data withProcess:(NSString *)process withKey:(NSString*) key password:(NSString *) password{
+    
     NSString * soapMessage = [[NSString alloc] initWithFormat:@"<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://service.threesignals.co/\"><soap:Header></soap:Header><soap:Body><ser:process><request><data>%@</data><process>%@</process><key>%@</key><password>%@</password></request></ser:process></soap:Body></soap:Envelope>", _data, process, key, password];
     NSURL *urlRequest = [NSURL URLWithString:url];
+    NSLog(@"URL: %@", url);
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:urlRequest];
     NSString *msgLength = [NSString stringWithFormat:@"%lu", [soapMessage length]];
     
@@ -39,12 +41,10 @@ NSString * elementKey;
     [theRequest setHTTPMethod:@"POST"];
     [theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
     
-    NSURLConnection *theConnection =
-    [[NSURLConnection alloc] initWithRequest:theRequest delegate:self startImmediately:NO];
-    [theConnection scheduleInRunLoop:[NSRunLoop mainRunLoop]
-                          forMode:NSRunLoopCommonModes];
-    [theConnection start];
-    if( theConnection )
+    //NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self startImmediately:NO];
+    //[theConnection scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    //[theConnection start];
+    /*if( theConnection )
     {
         webResponse = [NSMutableData data] ;
         if(!currentElement){
@@ -55,6 +55,32 @@ NSString * elementKey;
     else
     {
         NSLog(@"theConnection is NULL");
+    }*/
+    theRequest.timeoutInterval = 5.0;
+    NSURLResponse * response = nil;
+    NSError * error = nil;
+    NSData * data = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:&response error:&error];
+    if(!error){
+        NSMutableString * soapResponse = [[NSMutableString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
+        
+        // Tell NSXMLParser that this class is its delegate
+        [parser setDelegate:self];
+        
+        
+        [parser setShouldProcessNamespaces:NO];
+        [parser setShouldReportNamespacePrefixes:NO];
+        [parser setShouldResolveExternalEntities:NO];
+        
+        // Kick off file parsing
+        [parser parse];
+        
+        //[parser setDelegate:nil];
+        NSLog(@"%@",soapResponse);
+        NSLog(@"%@", currentElement);
+        return currentElement;
+    }else{
+        NSLog(@"No se pudo conectar error %@", [error description]);
     }
     return nil;
 }
@@ -98,7 +124,7 @@ NSString * elementKey;
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     // The request has failed for some reason!
     // Check the error var
-    NSLog(@"Error : %@",[error localizedDescription]);
+    NSLog(@"Error WM: %@",[error localizedDescription]);
 }
 
 - (void)parserDidStartDocument:(NSXMLParser *)parser

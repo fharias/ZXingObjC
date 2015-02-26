@@ -103,7 +103,7 @@
             if([responseReader.state isEqualToString:@"1"]){
                 result = [[ZXResult alloc] initWithText:responseReader.tagid rawBytes:nil resultPoints:nil format:kThreeSignalsFormat];
             }else{
-                //NSLog(@"Error: %@", responseReader.message);
+                NSLog(@"Error: %@", responseReader.message);
             }
         }
     }
